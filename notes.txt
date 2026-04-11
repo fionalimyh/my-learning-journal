@@ -2,3 +2,5 @@ Day 1: Git is like a time machine for files.
 GitHub is where those snapshots live in the cloud.
 
 Day 2: Stage → Commit → Push is the core workflow!
+
+Updated from GitHub directly!
