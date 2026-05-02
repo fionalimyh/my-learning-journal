@@ -1,0 +1,1974 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Thinking</title>
+    <meta
+      name="description"
+      content="Website case study, Jakob 10 Heuristics analysis, and RWD breakdown by Fiona Lim."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Outfit:wght@300;400;500;600&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+       Navbar
+       ============================================================ -->
+    <nav class="navbar navbar-expand-lg fl-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Fiona<span>.</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-1">
+            <li class="nav-item">
+              <a class="nav-link fl-nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fl-nav-link active" href="design-thinking.html"
+                >Design Thinking</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fl-nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fl-nav-link" href="portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============================================================
+       Page Hero
+       ============================================================ -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero-label">The Summary</p>
+        <h1 class="reveal">Design Thinking</h1>
+        <p class="reveal reveal-delay-1" style="font-size: 1.1rem">
+          A presentation summary of how this portfolio was conceptualised,
+          wireframed, and built. In addition, analysing 2 websites with Jakob's
+          Heuristics analysis and breakdown of responsive web design
+          implementation.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       Section 1: The process/flow of building the website
+       ============================================================ -->
+    <section class="dt-section">
+      <div class="container">
+        <p class="section-label reveal">The Flow</p>
+        <h2 class="section-title reveal">Building the Portfolio</h2>
+        <p class="section-desc reveal">
+          This portfolio was designed with UX-first thinking — starting from
+          user goals, mapping a content hierarchy, wireframing layouts with
+          Bootstrap 5.
+        </p>
+
+        <!-- Build process steps -->
+        <div class="row g-4">
+          <div class="col-lg-6 col-12">
+            <div class="process-step reveal">
+              <span class="step-num">01</span>
+              <div class="step-content">
+                <h5>Define Goals &amp; Audience</h5>
+                <p>
+                  <span style="color: var(--accent-2)">Target audience:</span>
+                  Tech Recruiters and Hiring Managers.
+                  <br /><span style="color: var(--accent-2)">Goal:</span> Convey
+                  technical depth, leadership and skills through Portfolios.
+                  <br /><span style="color: var(--accent-2)">Hook:</span>
+                  "building systems that scale"; "integrating GenAI into system
+                  workflows".
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step reveal reveal-delay-1">
+              <span class="step-num">02</span>
+              <div class="step-content">
+                <h5>Information Architecture</h5>
+                <p>
+                  <span style="color: var(--accent-2)">Home: </span>
+                  Gives users the first impression, crucial in determining
+                  drop-offs. <br /><span style="color: var(--accent-2)"
+                    >Design Thinking: </span
+                  >Shows the methodology of building the Portfolio site.
+                  <br /><span style="color: var(--accent-2)">About: </span>Shows
+                  credibility through the education, experience and suporting
+                  details. <br /><span style="color: var(--accent-2)"
+                    >Portfolio:
+                  </span>
+                  Shows the past projects and a contact form to connect.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step reveal reveal-delay-2">
+              <span class="step-num">03</span>
+              <div class="step-content">
+                <h5>Wireframe &amp; Layout Planning</h5>
+                <p>
+                  <span style="color: var(--accent-2)"
+                    >Simple wireframes sketches: </span
+                  >Identified hero placement, card grid density, and CTA
+                  positioning before coding.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step reveal reveal-delay-3">
+              <span class="step-num">04</span>
+              <div class="step-content">
+                <h5>Bootstrap 5 Implementation</h5>
+                <p>
+                  <span style="color: var(--accent-2)"
+                    >Utilised Bootstrap5's grid: </span
+                  >col-12 / col-md-6 / col-lg-3 for the cards. <br /><span
+                    style="color: var(--accent-2)"
+                    >Custom CSS layering: </span
+                  >for dark theme, effects and typography.l
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step reveal">
+              <span class="step-num">05</span>
+              <div class="step-content">
+                <h5>Test &amp; Iterate Responsiveness</h5>
+                <p>
+                  <span style="color: var(--accent-2)"
+                    >Validated the RWD breakpoints: </span
+                  >Mobile (&lt;576px), Tablet (576–992px) and Desktop (≥992px).
+                  <br /><span style="color: var(--accent-2)"
+                    >Further customisations: </span
+                  >Adjusted typography scale, stat bar layout and widths per
+                  breakpoint.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /col -->
+
+          <!-- Wireframe diagram column -->
+          <div class="col-lg-6 col-12 reveal reveal-delay-1">
+            <div class="glass-card" style="height: 100%">
+              <p class="section-label mb-1">Wireframe Sketches</p>
+
+              <!-- Bootstrap Carousel: one slide per page.
+                   data-bs-ride="false" means it does NOT auto-play —
+                   the user clicks Prev/Next to navigate manually. -->
+              <div
+                id="wireframeCarousel"
+                class="carousel slide"
+                data-bs-ride="false"
+              >
+                <!-- Dot indicators: clicking a dot jumps to that slide -->
+                <div class="carousel-indicators wf-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#wireframeCarousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Home"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#wireframeCarousel"
+                    data-bs-slide-to="1"
+                    aria-label="Design Thinking"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#wireframeCarousel"
+                    data-bs-slide-to="2"
+                    aria-label="About"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#wireframeCarousel"
+                    data-bs-slide-to="3"
+                    aria-label="Portfolio"
+                  ></button>
+                </div>
+
+                <div class="carousel-inner">
+                  <!-- ── SLIDE 1: Home ── -->
+                  <div class="carousel-item active">
+                    <div class="wf-slide">
+                      <p class="wf-page-label">01 · Home</p>
+                      <!-- NAV bar: full-width strip -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="height: 32px; font-size: 0.9rem"
+                          >
+                            NAV: Logo · Home · Design Thinking · About ·
+                            Portfolio
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Hero: text column + avatar column side by side -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-7">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 90px; font-size: 0.9rem"
+                          >
+                            HERO<br />Name + Typewriter<br />CTA Buttons · Stats
+                            Bar
+                          </div>
+                        </div>
+                        <div class="col-5">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 90px; font-size: 0.9rem"
+                          >
+                            AVATAR<br />Animated Illustration <br /><br />
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 4 project cards (col-3 each = 4-per-row on desktop) -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-3">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 60px; font-size: 0.9rem"
+                          >
+                            Card 1
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 60px; font-size: 0.9rem"
+                          >
+                            Card 2
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 60px; font-size: 0.9rem"
+                          >
+                            Card 3
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 60px; font-size: 0.9rem"
+                          >
+                            Card 4
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Skills cloud: full-width badge grid -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-12">
+                          <div class="wireframe-box" style="font-size: 0.9rem">
+                            SKILLS LABELS (badge grid)
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Footer: always last row -->
+                      <div class="row g-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="height: 28px; font-size: 0.9rem"
+                          >
+                            FOOTER: Brand · Copyright · Social Links
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ── SLIDE 2: Design Thinking ── -->
+                  <div class="carousel-item">
+                    <div class="wf-slide">
+                      <p class="wf-page-label">02 · Design Thinking</p>
+                      <!-- NAV -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="height: 32px; font-size: 0.9rem"
+                          >
+                            NAV: Logo · Home · Design Thinking · About ·
+                            Portfolio
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Page-level hero band -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="height: 44px; font-size: 0.9rem"
+                          >
+                            PAGE HERO: Title + Description
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Case study steps + wireframe diagram side by side -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-6">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 72px; font-size: 0.9rem"
+                          >
+                            CASE STUDY<br />05 Build Steps
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 72px; font-size: 0.9rem"
+                          >
+                            WIREFRAME<br />Sketch Diagram
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Key design decision cards (3 across) -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 44px; font-size: 0.9rem"
+                          >
+                            Colour
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 44px; font-size: 0.9rem"
+                          >
+                            Typography
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 44px; font-size: 0.9rem"
+                          >
+                            Motion
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Heuristic eval: tabs + accordion -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 56px; font-size: 0.9rem"
+                          >
+                            HEURISTIC EVAL<br />NavTabs → Accordion H01–H10
+                          </div>
+                        </div>
+                      </div>
+                      <!-- RWD Cards (3 across) -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 44px; font-size: 0.9rem"
+                          >
+                            Mobile
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 44px; font-size: 0.9rem"
+                          >
+                            Tablet
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 44px; font-size: 0.9rem"
+                          >
+                            Desktop
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Footer -->
+                      <div class="row g-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="height: 28px; font-size: 0.9rem"
+                          >
+                            FOOTER: Brand · Copyright · Social Links
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ── SLIDE 3: About ── -->
+                  <div class="carousel-item">
+                    <div class="wf-slide">
+                      <p class="wf-page-label">03 · About</p>
+                      <!-- NAV -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="height: 32px; font-size: 0.9rem"
+                          >
+                            NAV: Logo · Home · Design Thinking · About ·
+                            Portfolio
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Page hero -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="height: 44px; font-size: 0.9rem"
+                          >
+                            PAGE HERO: Title + Description
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Bio (wide) + Quick Facts (narrow) -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-8">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 72px; font-size: 0.9rem"
+                          >
+                            BIO<br />Summary + Download CV
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 72px; font-size: 0.9rem"
+                          >
+                            MINI AVATAR<br />Role · Identifier
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Education timeline -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="height: 44px; font-size: 0.9rem"
+                          >
+                            EDUCATION<br />Timeline
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Work accordion -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="height: 44px; font-size: 0.9rem"
+                          >
+                            WORK EXP<br />Accordion
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Certificate + Hobby diagram side by side -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-6">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 72px; font-size: 0.9rem"
+                          >
+                            CERTICATES<br />Supporting Docs
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 72px; font-size: 0.9rem"
+                          >
+                            HOBBIES<br />Beyond Work
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Content Creator -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-12">
+                          <div class="wireframe-box" style="font-size: 0.9rem">
+                            CTA<br />Youtube · TikTok
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Footer -->
+                      <div class="row g-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="height: 28px; font-size: 0.9rem"
+                          >
+                            FOOTER: Brand · Copyright · Social Links
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ── SLIDE 4: Portfolio ── -->
+                  <div class="carousel-item">
+                    <div class="wf-slide">
+                      <p class="wf-page-label">04 · Portfolio</p>
+                      <!-- NAV -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="height: 32px; font-size: 0.9rem"
+                          >
+                            NAV: Logo · Home · Design Thinking · About ·
+                            Portfolio
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Page hero -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="height: 44px; font-size: 0.9rem"
+                          >
+                            PAGE HERO: Title + Description
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Row 1: 3 project cards (col-4 = 3-per-row grid) -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 48px; font-size: 0.9rem"
+                          >
+                            Project 1
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 48px; font-size: 0.9rem"
+                          >
+                            Project 2
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 48px; font-size: 0.9rem"
+                          >
+                            Project 3
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Row 2: 3 more project cards -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 48px; font-size: 0.9rem"
+                          >
+                            Project 4
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 48px; font-size: 0.9rem"
+                          >
+                            Project 5
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 48px; font-size: 0.9rem"
+                          >
+                            Project 6
+                          </div>
+                        </div>
+                      </div>
+                      <!-- JS Demos -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 48px; font-size: 0.9rem"
+                          >
+                            JS Card 1
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 48px; font-size: 0.9rem"
+                          >
+                            JS Card 2
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 48px; font-size: 0.9rem"
+                          >
+                            JS Card 3
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Contact Form -->
+                      <div class="row g-2 mb-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="min-height: 56px; font-size: 0.9rem"
+                          >
+                            CONTACT FORM<br />+ Star Rating
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Footer -->
+                      <div class="row g-2">
+                        <div class="col-12">
+                          <div
+                            class="wireframe-box"
+                            style="height: 28px; font-size: 0.9rem"
+                          >
+                            FOOTER: Brand · Copyright · Social Links
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /carousel-inner -->
+
+                <!-- Prev / Next arrow controls -->
+                <button
+                  class="carousel-control-prev wf-ctrl"
+                  type="button"
+                  data-bs-target="#wireframeCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next wf-ctrl"
+                  type="button"
+                  data-bs-target="#wireframeCarousel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <!-- /wireframeCarousel -->
+            </div>
+            <!-- /glass-card -->
+          </div>
+          <!-- /col -->
+        </div>
+        <!-- /row -->
+
+        <!-- Design decisions documented -->
+        <hr class="divider" />
+        <div class="row g-4">
+          <div class="col-12 reveal">
+            <h3 style="font-size: 1.2rem; margin-bottom: 20px">
+              Key Design Decisions
+            </h3>
+          </div>
+          <div class="col-md-4 col-12 reveal d-flex flex-column">
+            <div class="heuristic-card h-100">
+              <div class="heuristic-num">COLOUR</div>
+              <div class="heuristic-title">
+                Background · Text · Accent Palettes
+              </div>
+              <div class="heuristic-body">
+                A dark navy background with glass cards for depths. Consistent
+                text and accent palettes for futuristic tech theme.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 reveal d-flex flex-column">
+            <div class="heuristic-card h-100">
+              <div class="heuristic-num">TYPOGRAPHY</div>
+              <div class="heuristic-title">Syne · Outfit · DM Mono</div>
+              <div class="heuristic-body">
+                The trending tech font, Syne. Outfit font is a highly legible
+                body. DM Mono excudes a technical feel when applied to labels
+                and tags — reinforcing the Tech-Ops theme.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 reveal d-flex flex-column">
+            <div class="heuristic-card h-100">
+              <div class="heuristic-num">MOTION</div>
+              <div class="heuristic-title">Animations · Effects</div>
+              <div class="heuristic-body">
+                Typewriter on hero signals activity. Scroll-reveal displays
+                content progressively. Hover effects (card lift, glow) gives
+                interactive feedback to users.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </section>
+
+    <!-- ============================================================
+       Section 2: 2 reference sites, Jakob's 10 Heuristics analysis — NavTabs + Accordion
+       Reducing the length of the website and the mental load of users by breaking down into individual display of information.
+       ============================================================ -->
+    <section class="dt-section" style="background: var(--bg-2)">
+      <div class="container">
+        <p class="section-label reveal">Jakob 10 Heuristics · Analysis</p>
+        <h2 class="section-title reveal">Heuristic Evaluation</h2>
+        <p class="section-desc reveal">
+          Two portfolio sites evaluated against Nielsen's 10 Usability
+          Heuristics. <br />Use the tabs to switch between references, and click
+          any row to read the full findings.
+        </p>
+
+        <!-- ── Tab switcher ── -->
+        <ul
+          class="nav nav-tabs heuristic-tabs mb-4 reveal"
+          id="heuristicTabs"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="adri-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#adri-pane"
+              type="button"
+              role="tab"
+              aria-controls="adri-pane"
+              aria-selected="true"
+            >
+              <span class="tab-ref-label">Reference 1</span>
+              Fluid Glass
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="deduxer-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#deduxer-pane"
+              type="button"
+              role="tab"
+              aria-controls="deduxer-pane"
+              aria-selected="false"
+            >
+              <span class="tab-ref-label">Reference 2</span>
+              Deduxer Studio
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="heuristicTabContent">
+          <!-- ══════════════════════════════════════════
+               TAB 1 — FLUID GLASS
+               ══════════════════════════════════════════ -->
+          <div
+            class="tab-pane fade show active"
+            id="adri-pane"
+            role="tabpanel"
+            aria-labelledby="adri-tab"
+          >
+            <p class="section-desc mb-3" style="font-size: 1.1rem">
+              Website URL:&ensp;<a
+                href="https://fluid.glass/"
+                target="_blank"
+                style="color: var(--accent)"
+                ><strong><u>Fluid.glass</u></strong></a
+              ><br />
+              A glass glazing website showcasing designs with media
+              integrations, interactive scrolling transitions and bold
+              typography.
+            </p>
+
+            <div class="accordion heuristic-accordion" id="adriAccordion">
+              <!-- H01 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adri-h01"
+                    aria-expanded="true"
+                  >
+                    <span class="heuristic-acc-num">H01</span>
+                    <span class="heuristic-acc-title"
+                      >Visibility of System Status</span
+                    >
+                    <span class="verdict verdict-pass acc-verdict">✓ Pass</span>
+                  </button>
+                </h2>
+                <div
+                  id="adri-h01"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#adriAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Usage of familiar designs
+                    </div>
+                    The progress bar at the bottom of the slider on the Projects
+                    page alerts users before the image changes. <br />
+                    <img
+                      src="images/fluidglass-01.1.png"
+                      alt="Show progress bar below the title of the slider"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                    <br /><br />
+                    Additionally, there is a hover function that shows "VIEW"
+                    when user hovers over active elements. This lets users know
+                    that the element is clickable if they are interested in
+                    learning more about the product.
+                    <br />
+                    <img
+                      src="images/fluidglass-01.2.png"
+                      alt="View function when hover over active elements"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H02 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adri-h02"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H02</span>
+                    <span class="heuristic-acc-title"
+                      >Match between system and the real world</span
+                    >
+                    <span class="verdict verdict-pass acc-verdict">✓ Pass</span>
+                  </button>
+                </h2>
+                <div
+                  id="adri-h02"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#adriAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Usage of familiar designs
+                    </div>
+                    Using images of "Doors", "Windows and "Structural" which are
+                    familiar to content readers and allow them to quickly
+                    identify their required service immediately. Furthermore,
+                    displaying the keyword over the image to further support the
+                    user's thought process to land on the correct inference
+                    immediately. <br />
+                    <img
+                      src="images/fluidglass-02.png"
+                      alt="Show images of glass doors, structures, windows and others"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H03 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adri-h03"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H03</span>
+                    <span class="heuristic-acc-title"
+                      >User control and freedom</span
+                    >
+                    <span class="verdict verdict-fail acc-verdict"
+                      >✗ Needs Improvement</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="adri-h03"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#adriAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Unable to return to previous page
+                    </div>
+                    There is no dedicated 'Back' button available on the
+                    interface. Once users navigate to a new page, they must rely
+                    on the browser's back function which limits navigation
+                    freedom.
+                  </div>
+                </div>
+              </div>
+
+              <!-- H04 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adri-h04"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H04</span>
+                    <span class="heuristic-acc-title"
+                      >Consistency and standards</span
+                    >
+                    <span class="verdict verdict-pass acc-verdict">✓ Pass</span>
+                  </button>
+                </h2>
+                <div
+                  id="adri-h04"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#adriAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Consistency in designs and theme
+                    </div>
+                    Using a consistent arrow design in buttons allows users to
+                    easily identify them.<br />
+                    <img
+                      src="images/fluidglass-04.1.png"
+                      alt="Arrow design in buttons"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                    <br /><br />Likewise, the consistent typography and colour
+                    theme keeps the website tidy and uncluttered. This helps to
+                    reduce the user's cognitive load. <br />
+                    <img
+                      src="images/fluidglass-04.2.png"
+                      alt="Consistent use of typography"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H05 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adri-h05"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H05</span>
+                    <span class="heuristic-acc-title">Error prevention</span>
+                    <span class="verdict verdict-neutral acc-verdict"
+                      >— Neutral</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="adri-h05"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#adriAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Designs prevent user mistakes
+                    </div>
+                    The contact form includes required field indicators and
+                    basic validation. <br />
+                    <img
+                      src="images/fluidglass-05.1.png"
+                      alt="Detect missing Name field in contact form"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                    <br /><br />However, the error message only displays upon
+                    clicking the 'Submit' button, which increases user friction.
+                    <br />
+                    <img
+                      src="images/fluidglass-05.2.png"
+                      alt="Detect error in email address format"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H06 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adri-h06"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H06</span>
+                    <span class="heuristic-acc-title"
+                      >Recognition Rather Than Recall</span
+                    >
+                    <span class="verdict verdict-pass acc-verdict">✓ Pass</span>
+                  </button>
+                </h2>
+                <div
+                  id="adri-h06"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#adriAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Floating menu reduces memory load
+                    </div>
+                    The floating menu at the bottom of the page remains visible
+                    as the user navigates the site. It minimises the user's
+                    memory load by making navigation options constantly
+                    visible.<br />
+                    <img
+                      src="images/fluidglass-06.png"
+                      alt="Detect error in email address format"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H07 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adri-h07"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H07</span>
+                    <span class="heuristic-acc-title"
+                      >Flexibility and Efficiency of use</span
+                    >
+                    <span class="verdict verdict-pass acc-verdict">✓ Pass</span>
+                  </button>
+                </h2>
+                <div
+                  id="adri-h07"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#adriAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Filter function available for expert users
+                    </div>
+                    On the Projects page, a filter function is available to help
+                    expert users quickly select a specific product rather than
+                    scrolling through all the projects. This acts as an
+                    accelerator to expert users. <br />
+                    <img
+                      src="images/fluidglass-07.png"
+                      alt="Filter function for quick search"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H08 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adri-h08"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H08</span>
+                    <span class="heuristic-acc-title"
+                      >Aesthetic and Minimalist Design</span
+                    >
+                    <span class="verdict verdict-fail acc-verdict"
+                      >✗ Needs Improvement</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="adri-h08"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#adriAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">Alignment issues</div>
+                    There is a consistent use of colour theme and typography but
+                    the alignment of images are off on the home page. <br />
+                    <img
+                      src="images/fluidglass-08.1.png"
+                      alt="Alignment issues on home page"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                    <br /><br />In addition, there are inconsistent gaps or
+                    missing cards on the project page. <br />
+                    <img
+                      src="images/fluidglass-08.2.png"
+                      alt="Alignment issues on home page"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H09 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adri-h09"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H09</span>
+                    <span class="heuristic-acc-title"
+                      >Recognise, Diagnose &amp; Recover from Errors</span
+                    >
+                    <span class="verdict verdict-neutral acc-verdict"
+                      >— Neutral</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="adri-h09"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#adriAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Error messages are clear and concise
+                    </div>
+                    The error messages displayed for missing or incorrect fields
+                    are clear and specify the exact problem. It provides
+                    constructive feedback which allows the user to easily
+                    correct the error.<br />
+                    <img
+                      src="images/fluidglass-05.2.png"
+                      alt="Detect error in email address format"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                    <br /><br />However, the system fails to display an error
+                    message when a user uploads an invalid file. <br />
+                    <img
+                      src="images/fluidglass-09.png"
+                      alt="Python file successfully uploaded to contact form"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H10 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adri-h10"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H10</span>
+                    <span class="heuristic-acc-title"
+                      >Help and Documentation</span
+                    >
+                    <span class="verdict verdict-pass acc-verdict">✓ Pass</span>
+                  </button>
+                </h2>
+                <div
+                  id="adri-h10"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#adriAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">FAQ is available</div>
+                    The FAQ is available if user requires any help. <br />
+                    <img
+                      src="images/fluidglass-10.png"
+                      alt="Python file successfully uploaded to contact form"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /adriAccordion -->
+
+            <!-- Summary scorecard -->
+            <div
+              class="glass-card d-flex flex-wrap gap-3 align-items-center mt-4"
+            >
+              <div>
+                <span class="section-label mb-0">Overall Rating</span>
+                <span style="color: var(--text)"
+                  >Pass:&ensp;6/10&ensp;·&ensp;Neutral:&ensp;2/10&ensp;·&ensp;Needs
+                  Improvement:&ensp;2/10</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- /adri-pane -->
+
+          <!-- ══════════════════════════════════════════
+               TAB 2 — DEDUXER STUDIO
+               ══════════════════════════════════════════ -->
+          <div
+            class="tab-pane fade"
+            id="deduxer-pane"
+            role="tabpanel"
+            aria-labelledby="deduxer-tab"
+          >
+            <p class="section-desc mb-3" style="font-size: 1.1rem">
+              Website URL:&ensp;<a
+                href="https://www.deduxer.studio"
+                target="_blank"
+                style="color: var(--accent)"
+                ><strong><u>Deduxer.studio</u></strong></a
+              ><br />
+              A motion-design and creative studio portfolio — dark-mode first,
+              heavily interactive with scroll-triggered animations and rich user
+              interactions.
+            </p>
+
+            <div class="accordion heuristic-accordion" id="deduxerAccordion">
+              <!-- H01 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ded-h01"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H01</span>
+                    <span class="heuristic-acc-title"
+                      >Visibility of System Status</span
+                    >
+                    <span class="verdict verdict-pass acc-verdict">✓ Pass</span>
+                  </button>
+                </h2>
+                <div
+                  id="ded-h01"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#deduxerAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Real-time feedback on scroll and interaction
+                    </div>
+                    Scroll progress indicators on the right integrated into the
+                    animated transitions helps to communicate page position
+                    effectively.
+                    <br />
+                    <img
+                      src="images/deduxer-01.1.png"
+                      alt="Show progress bar on the right of the page"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                    <br /><br />
+                    There is hover function that shows "Click" when user hover
+                    above dynamic elements and "Scroll" for static elements.
+                    These allow users to know that there is additional hidden
+                    information under the click.<br />
+                    <img
+                      src="images/deduxer-01.3.png"
+                      alt="Shows scroll when hover over static elements"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                    <br /><br />
+                    <img
+                      src="images/deduxer-01.2.png"
+                      alt="Shows click when hover over dynamic elements"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H02 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ded-h02"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H02</span>
+                    <span class="heuristic-acc-title"
+                      >Match Between System and Real World</span
+                    >
+                    <span class="verdict verdict-pass acc-verdict">✓ Pass</span>
+                  </button>
+                </h2>
+                <div
+                  id="ded-h02"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#deduxerAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">Universal Icons</div>
+                    The use of universal icons help users to identify the
+                    content information immediately. This helps reduce the
+                    cognitive and mental load of users.
+                    <br />
+                    <img
+                      src="images/deduxer-02.png"
+                      alt="Show icons for AI & Automation and Search engines"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H03 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ded-h03"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H03</span>
+                    <span class="heuristic-acc-title"
+                      >User Control and Freedom</span
+                    >
+                    <span class="verdict verdict-fail acc-verdict"
+                      >✗ Needs Improvement</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="ded-h03"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#deduxerAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Users may feel locked into scroll experiences
+                    </div>
+                    Although the transition effects are visually appealing,
+                    there is no skip-to-content button. There are irrelevant
+                    animations that do not value-add to the content.
+                    <br /><img
+                      src="images/deduxer-03.png"
+                      alt="Irrelevant animations and long scrolls"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    /><br />
+                    <br />
+                    Additionally, there is no dedicated 'Back' button available
+                    on the interface. Once users navigate to a new page, they
+                    must rely on the browser's back function which limits
+                    navigation freedom.
+                  </div>
+                </div>
+              </div>
+
+              <!-- H04 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ded-h04"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H04</span>
+                    <span class="heuristic-acc-title"
+                      >Consistency and Standards</span
+                    >
+                    <span class="verdict verdict-neutral acc-verdict"
+                      >— Neutral</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="ded-h04"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#deduxerAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Overloaded transition effects
+                    </div>
+                    Using consistent black buttons allow users to easily
+                    identify them and help reduce their cognitive load.
+                    <br /><img
+                      src="images/deduxer-04.1.png"
+                      alt="Consistent black buttons"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    /><br />
+                    <br />
+                    Despite having consistent colour schemes and typography, the
+                    oversized headers and overloading transitions can cause
+                    confusions to users.<br /><img
+                      src="images/deduxer-04.2.png"
+                      alt="Oversized headers and overloading transitions"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H05 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ded-h05"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H05</span>
+                    <span class="heuristic-acc-title">Error Prevention</span>
+                    <span class="verdict verdict-pass acc-verdict">✓ Pass</span>
+                  </button>
+                </h2>
+                <div
+                  id="ded-h05"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#deduxerAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Designs prevent user mistakes
+                    </div>
+                    The contact form includes required field indicators and
+                    basic validation. The error message for email displays
+                    immediately when the user did not fill in the correct
+                    format. <br /><img
+                      src="images/deduxer-05.png"
+                      alt="Field indicators and Basic Validation"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H06 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ded-h06"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H06</span>
+                    <span class="heuristic-acc-title"
+                      >Recognition Rather Than Recall</span
+                    >
+                    <span class="verdict verdict-pass acc-verdict">✓ Pass</span>
+                  </button>
+                </h2>
+                <div
+                  id="ded-h06"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#deduxerAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Floating menu reduces memory load
+                    </div>
+                    The floating header at the top of the page remains visible
+                    as the user navigates the site. It minimizes the user's
+                    memory load by making navigation options constantly
+                    visible.<br /><img
+                      src="images/deduxer-06.png"
+                      alt="Floating header at the top of home page"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H07 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ded-h07"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H07</span>
+                    <span class="heuristic-acc-title"
+                      >Flexibility and Efficiency of Use</span
+                    >
+                    <span class="verdict verdict-pass acc-verdict">✓ Pass</span>
+                  </button>
+                </h2>
+                <div
+                  id="ded-h07"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#deduxerAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Shortcut available for expert users
+                    </div>
+                    On the Cases page, there is a menu function available to
+                    help expert users quickly select the specific case rather
+                    than scrolling through all the cases. This acts as an
+                    accelerator to expert users.<br /><img
+                      src="images/deduxer-07.png"
+                      alt="Shortcut Menu Function for expert users"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H08 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ded-h08"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H08</span>
+                    <span class="heuristic-acc-title"
+                      >Aesthetic and Minimalist Design</span
+                    >
+                    <span class="verdict verdict-fail acc-verdict"
+                      >✗ Needs Improvement</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="ded-h08"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#deduxerAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Poor positioning and padding
+                    </div>
+                    On Pricing page, the contents have minimum to no padding.
+                    The page looks extremely cluttered with lines from table and
+                    overlapping cards of different opacity. There are mixtures
+                    of font sizes and misalignment of elements which can cause
+                    cognitive overload.<br /><img
+                      src="images/deduxer-08.png"
+                      alt="Poor positioning, padding and misalignment of elements"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H09 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ded-h09"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H09</span>
+                    <span class="heuristic-acc-title"
+                      >Recognise, Diagnose &amp; Recover from Errors</span
+                    >
+                    <span class="verdict verdict-pass acc-verdict">✓ Pass</span>
+                  </button>
+                </h2>
+                <div
+                  id="ded-h09"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#deduxerAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">
+                      Error messages are clear and concise
+                    </div>
+                    The error messages displayed for missing or incorrect fields
+                    are clear and specify the exact problem. It provides
+                    constructive feedback which allows the user to easily
+                    correct the error.<br /><img
+                      src="images/deduxer-05.png"
+                      alt="Detect error in email address format"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- H10 -->
+              <div class="accordion-item heuristic-acc-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button heuristic-acc-btn collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#ded-h10"
+                    aria-expanded="false"
+                  >
+                    <span class="heuristic-acc-num">H10</span>
+                    <span class="heuristic-acc-title"
+                      >Help and Documentation</span
+                    >
+                    <span class="verdict verdict-pass acc-verdict">✓ Pass</span>
+                  </button>
+                </h2>
+                <div
+                  id="ded-h10"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#deduxerAccordion"
+                >
+                  <div class="accordion-body heuristic-acc-body">
+                    <div class="heuristic-num mb-1">FAQ is available</div>
+                    The FAQ is available if user requires any help.<br /><img
+                      src="images/deduxer-10.png"
+                      alt="Detect error in email address format"
+                      class="img-fluid rounded-3 mt-3"
+                      style="max-width: 550px; opacity: 0.9"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /deduxerAccordion -->
+
+            <!-- Summary scorecard -->
+            <div
+              class="glass-card d-flex flex-wrap gap-3 align-items-center mt-4"
+            >
+              <div>
+                <span class="section-label mb-0">Overall Rating</span>
+                <span style="color: var(--text)"
+                  >Pass:&ensp;7/10&ensp;·&ensp;Neutral:&ensp;1/10&ensp;·&ensp;Needs
+                  Improvement:&ensp;2/10</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- /deduxer-pane -->
+        </div>
+        <!-- /tab-content -->
+      </div>
+      <!-- /container -->
+    </section>
+
+    <!-- ============================================================
+       Section 3: RWD Breakdown
+       ============================================================ -->
+    <section class="dt-section" style="background: var(--bg-2)">
+      <div class="container">
+        <p class="section-label reveal">Responsive Web Design</p>
+        <h2 class="section-title reveal">RWD Implementation</h2>
+        <p class="section-desc reveal">
+          This site meets all three required breakpoints using Bootstrap 5's
+          grid system combined with custom CSS media queries.
+        </p>
+
+        <!-- Three device breakpoints -->
+        <div class="row g-4 mb-5">
+          <div class="col-lg-4 col-md-6 col-12 reveal d-flex flex-column">
+            <div class="rwd-device h-100">
+              <div class="rwd-device-icon">📱</div>
+              <div class="rwd-device-label">Mobile</div>
+              <div class="rwd-device-range">&lt; 576px</div>
+              <hr style="border-color: var(--border); margin: 12px 0" />
+              <ul
+                style="
+                  text-align: left;
+                  color: var(--muted);
+                  font-size: 1.1rem;
+                  padding-left: 18px;
+                "
+              >
+                <li>Single-column layout (col-12)</li>
+                <li>Full-width CTA buttons</li>
+                <li>Stats bar stacks vertically</li>
+                <li>Hamburger menu visible</li>
+                <li>Orbs hidden to save performance</li>
+                <li>Avatar scaled to 210×270px</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 reveal d-flex flex-column">
+            <div class="rwd-device h-100">
+              <div class="rwd-device-icon">💻</div>
+              <div class="rwd-device-label">Tablet</div>
+              <div class="rwd-device-range">≥ 576px · &lt; 992px</div>
+              <hr style="border-color: var(--border); margin: 12px 0" />
+              <ul
+                style="
+                  text-align: left;
+                  color: var(--muted);
+                  font-size: 1.1rem;
+                  padding-left: 18px;
+                "
+              >
+                <li>Two-column card grid (col-md-6)</li>
+                <li>Hero text at 2.7rem scale</li>
+                <li>Avatar 250×320px</li>
+                <li>Hamburger menu still visible</li>
+                <li>Stats bar adjusts min-width</li>
+                <li>Section padding reduced to 64px</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-12 reveal d-flex flex-column">
+            <div class="rwd-device h-100">
+              <div class="rwd-device-icon">🖥</div>
+              <div class="rwd-device-label">Desktop</div>
+              <div class="rwd-device-range">≥ 992px</div>
+              <hr style="border-color: var(--border); margin: 12px 0" />
+              <ul
+                style="
+                  text-align: left;
+                  color: var(--muted);
+                  font-size: 1.1rem;
+                  padding-left: 18px;
+                "
+              >
+                <li>Four-column card grid (col-lg-3)</li>
+                <li>Hero side-by-side layout</li>
+                <li>Full nav links (no hamburger)</li>
+                <li>All decorative orbs visible</li>
+                <li>Avatar full 300×380px</li>
+                <li>Hero padding 80px</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bootstrap grid used -->
+        <div class="row reveal">
+          <div class="col-12">
+            <div class="glass-card">
+              <p class="section-label">Bootstrap 5 Grid Classes Used</p>
+              <p
+                style="
+                  color: var(--muted);
+                  font-size: 0.98rem;
+                  margin-bottom: 14px;
+                "
+              >
+                The site uses Bootstrap's responsive tier system throughout.
+                Below is a summary of the main breakpoint classes applied per
+                component:
+              </p>
+              <div class="row g-3">
+                <div class="col-md-6 col-12">
+                  <div class="heuristic-card">
+                    <div class="heuristic-num">PROJECT CARDS</div>
+                    <div class="heuristic-body">
+                      <code style="color: var(--accent)"
+                        >col-12 col-md-6 col-lg-3</code
+                      ><br />
+                      4 cards on desktop · 2 on tablet · 1 on mobile
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="heuristic-card">
+                    <div class="heuristic-num">HERO LAYOUT</div>
+                    <div class="heuristic-body">
+                      <code style="color: var(--accent)">col-lg-6 col-12</code
+                      ><br />
+                      Side-by-side on desktop · Stacked on mobile/tablet
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="heuristic-card">
+                    <div class="heuristic-num">NAVBAR</div>
+                    <div class="heuristic-body">
+                      <code style="color: var(--accent)">navbar-expand-lg</code
+                      ><br />
+                      Hamburger shown on &lt;992px · Full links on ≥992px
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12">
+                  <div class="heuristic-card">
+                    <div class="heuristic-num">SKILLS / ABOUT GRID</div>
+                    <div class="heuristic-body">
+                      <code style="color: var(--accent)"
+                        >col-lg-4 col-md-6 col-12</code
+                      ><br />
+                      3 columns on desktop · 2 on tablet · 1 on mobile
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /container -->
+    </section>
+
+    <!-- ============================================================
+       FOOTER 
+       ============================================================ -->
+    <footer class="fl-footer">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <div class="col-md-4 col-12 text-md-start text-center">
+            <span
+              style="
+                font-family: &quot;Syne&quot;, sans-serif;
+                font-weight: 800;
+                font-size: 1.1rem;
+              "
+            >
+              Fiona<span style="color: var(--accent)">.</span>
+            </span>
+          </div>
+          <div class="col-md-4 col-12 text-center">
+            <p
+              style="
+                font-family: &quot;DM Mono&quot;, monospace;
+                font-size: 0.95rem;
+                letter-spacing: 0.08em;
+              "
+            >
+              © 2026 Fiona Lim · All rights reserved
+            </p>
+          </div>
+          <div
+            class="col-md-4 col-12 d-flex justify-content-md-end justify-content-center gap-2"
+          >
+            <a
+              href="https://www.linkedin.com/in/fionalyh"
+              target="_blank"
+              class="footer-social-link"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a href="mailto:Fionalimyh@gmail.com" class="footer-social-link"
+              ><i class="bi bi-envelope"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@ClashTillJcries"
+              target="_blank"
+              class="footer-social-link"
+              ><i class="bi bi-youtube"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@clashtilljcries"
+              target="_blank"
+              class="footer-social-link"
+              ><i class="bi bi-tiktok"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

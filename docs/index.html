@@ -1,1 +1,629 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Ensures correct scaling on all screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiona Lim's Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Fiona Lim — Digital Operations Manager specialising in GenAI, system design, and workflow automation across SEA."
+    />
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Outfit:wght@300;400;500;600&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+       Navbar: .navbar-expand-lg: full links on ≥992px, hamburger on <992px
+       ============================================================ -->
+    <nav class="navbar navbar-expand-lg fl-navbar">
+      <div class="container">
+        <!-- Brand / Logo -->
+        <a class="navbar-brand" href="index.html">Fiona<span>.</span></a>
+
+        <!-- Hamburger toggle — only visible on mobile/tablet (<992px) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible nav links -->
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-1">
+            <li class="nav-item">
+              <a class="nav-link fl-nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fl-nav-link" href="design-thinking.html"
+                >Design Thinking</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fl-nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fl-nav-link" href="portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============================================================
+       Hero Section
+       Left: typewriter intro + CTAs + stats
+       Right: Portfolio Avatar
+       ============================================================ -->
+    <section class="hero-section">
+      <div class="container position-relative">
+        <div class="row align-items-center g-5">
+          <!-- Left column: text content -->
+          <div class="col-lg-6 col-12">
+            <!-- Pill above name heading -->
+            <div class="hero-label reveal">Connect with Me · Singapore</div>
+
+            <!-- Name heading -->
+            <h1 class="hero-title reveal reveal-delay-1">
+              Hi, I'm<br />
+              <span class="accent">Fiona Lim</span>
+            </h1>
+
+            <!-- Typewriter looping tagline -->
+            <p
+              class="hero-title"
+              style="
+                font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+                margin-bottom: 20px;
+              "
+            >
+              <span id="typewriter"></span
+              ><span class="typewriter-cursor"></span>
+            </p>
+
+            <!-- Brief intro -->
+            <div class="card glass-card p-4 mt-4 mb-5 reveal reveal-delay-2">
+              <p class="hero-subtitle fs-5 mb-0">
+                A Digital Operations Manager scaling operations and aligning
+                workflows across SEA. I architect GenAI workflows, build CRMs
+                and Sales AI, and turn business logics into scalable systems.
+              </p>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="d-flex flex-wrap gap-3 reveal reveal-delay-3">
+              <a href="portfolio.html" class="btn-fl-primary">View My Work →</a>
+              <a href="design-thinking.html" class="btn-fl-outline"
+                >Design Thinking Analysis →</a
+              >
+            </div>
+
+            <!-- Stats Bar — count-up animation triggered by scroll -->
+            <div class="stats-bar reveal">
+              <div class="stat-item">
+                <!-- JS formula for dynamic data -->
+                <span class="stat-number" id="dynamic-experience"></span>
+                <span class="stat-label"><strong>Experience</strong></span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number"><strong> < 30s </strong></span>
+                <span class="stat-label">SLA Response</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number"><strong>300%</strong></span>
+                <span class="stat-label">LTV Growth</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">Sales AI</span>
+                <span class="stat-label"><strong>RAG Model</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right column: Portfolio Avatar -->
+          <div
+            class="col-lg-6 col-12 d-flex justify-content-center reveal reveal-delay-2"
+          >
+            <!-- .hero-img-wrap, card frame + bg shadow -->
+            <div class="hero-img-wrap">
+              <img
+                src="portfolio-avatar.jpeg"
+                alt="Fiona's Portfolio Avatar'"
+                class="hero-portrait"
+              />
+            </div>
+          </div>
+          <!-- /col -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </section>
+
+    <!-- ============================================================
+       // Featured Work
+       ============================================================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p class="section-label reveal">Featured Work</p>
+            <h2 class="section-title reveal">My Portfolio</h2>
+            <p class="section-desc reveal">
+              From web platforms to AI automation dashboards — here's a
+              selection of work that demonstrates my range across tech and
+              operations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Project cards — Bootstrap responsive grid -->
+        <div class="row g-4">
+          <!-- Card 1: Website Portfolio. "View Demo" opens the Bootstrap modal below.-->
+          <div class="col-lg-3 col-md-6 col-12 reveal">
+            <div class="project-card">
+              <span class="project-tag cyan">Web Development</span>
+              <h4>Website Portfolio</h4>
+              <p>
+                Education platform built from scratch. The website was used by
+                client between 2019 to 2025.
+              </p>
+              <!-- Bootstrap5 Modal + Youtube unlisted video -->
+              <button
+                type="button"
+                class="project-link project-link-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#champCodeModal"
+              >
+                <i class="bi bi-play-circle"></i> View Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Marketing Analyst AI -->
+          <div class="col-lg-3 col-md-6 col-12 reveal reveal-delay-1">
+            <div class="project-card">
+              <span class="project-tag purple">AI · React · Python</span>
+              <h4>Marketing Analyst AI</h4>
+              <p>
+                Marketing analytics dashboard with CSV pre-parsing logic which
+                fixes data issues — Infinity, Symbols, NaN — and accurate GenAI
+                insights.
+              </p>
+              <button
+                type="button"
+                class="project-link project-link-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#biaiModal"
+              >
+                <i class="bi bi-play-circle"></i> View Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: CRM System — opens #crmModal -->
+          <div class="col-lg-3 col-md-6 col-12 reveal reveal-delay-2">
+            <div class="project-card">
+              <span class="project-tag amber">Operations · CRM</span>
+              <h4>CRM Portfolio</h4>
+              <p>
+                CRM built from the ground, to handle 10X of business scale and
+                organisation scale.
+              </p>
+              <button
+                type="button"
+                class="project-link project-link-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#crmModal"
+              >
+                <i class="bi bi-play-circle"></i> View Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: YouTube/TikTok content -->
+          <div class="col-lg-3 col-md-6 col-12 reveal reveal-delay-3">
+            <div class="project-card">
+              <span class="project-tag green">Content · Marketing</span>
+              <h4>ClashTillJcries Channel</h4>
+              <p>
+                Gaming content creator on YouTube &amp; TikTok — consistent
+                branding and data-driven strategies.
+              </p>
+              <a
+                href="https://www.youtube.com/@ClashTillJcries"
+                target="_blank"
+                class="project-link"
+              >
+                <i class="bi bi-arrow-right"></i> <strong>View Channel</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </section>
+
+    <!-- ============================================================
+       Skills Label Section
+       ============================================================ -->
+
+    <section class="skills-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-4 reveal">
+            <p class="section-label justify-content-center">Skill Set</p>
+            <h2 class="section-title">Technologies &amp; Disciplines</h2>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6 col-12 reveal">
+            <p class="skill-cat-title text-center">⚙️ Tech</p>
+            <div class="text-center px-2">
+              <span class="skill-badge">Python OOP</span>
+              <span class="skill-badge">C#</span>
+              <span class="skill-badge">C++</span>
+              <span class="skill-badge">HTML / CSS / JS</span>
+              <span class="skill-badge">Jira / Confluence</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 reveal reveal-delay-1">
+            <p class="skill-cat-title text-center">
+              🗂 Operations &amp; Analytical
+            </p>
+            <div class="text-center px-2">
+              <span class="skill-badge purple">JMP Statistical</span>
+              <span class="skill-badge purple">Workflow Optimisation</span>
+              <span class="skill-badge purple">Miro / Notion</span>
+              <span class="skill-badge purple">Process Automation</span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 reveal reveal-delay-2">
+            <p class="skill-cat-title text-center">🎨 Creative</p>
+            <div class="text-center px-2">
+              <span class="skill-badge amber">Photoshop</span>
+              <span class="skill-badge amber">Blender 3D</span>
+              <span class="skill-badge amber">AutoCAD 365</span>
+              <span class="skill-badge amber">Unity Hub</span>
+              <span class="skill-badge amber">CapCut</span>
+              <span class="skill-badge amber">Content Strategy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /container -->
+
+    <!-- ============================================================
+       CTA 
+       ============================================================ -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-7 col-12 reveal">
+            <p class="section-label justify-content-center">Let's Talk</p>
+            <h2 class="section-title">Open to New Opportunities</h2>
+            <p
+              style="
+                color: var(--muted);
+                margin-bottom: 32px;
+                font-size: 1.1rem;
+              "
+            >
+              Looking for someone who can integrate business workflow into
+              Systems and AI? <br />I'd love to connect!
+            </p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+              <a href="portfolio.html#contact" class="btn-fl-primary"
+                >Get in Touch →</a
+              >
+              <a href="about.html" class="btn-fl-outline">About Me →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+    <footer class="fl-footer">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <!-- Brand -->
+          <div class="col-md-4 col-12 text-md-start text-center">
+            <span
+              class="navbar-brand"
+              style="
+                font-family: &quot;Syne&quot;, sans-serif;
+                font-weight: 800;
+              "
+            >
+              Fiona<span style="color: var(--accent)">.</span>
+            </span>
+          </div>
+
+          <!-- Copyright -->
+          <div class="col-md-4 col-12 text-center">
+            <p
+              style="
+                font-family: &quot;DM Mono&quot;, monospace;
+                font-size: 0.95rem;
+                letter-spacing: 0.08em;
+              "
+            >
+              © 2026 Fiona Lim · All rights reserved
+            </p>
+          </div>
+
+          <!-- Social links -->
+          <div
+            class="col-md-4 col-12 d-flex justify-content-md-end justify-content-center gap-2"
+          >
+            <a
+              href="https://www.linkedin.com/in/fionalyh"
+              target="_blank"
+              class="footer-social-link"
+              title="LinkedIn"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a
+              href="mailto:Fionalimyh@gmail.com"
+              class="footer-social-link"
+              title="Email"
+            >
+              <i class="bi bi-envelope"></i>
+            </a>
+            <a
+              href="https://www.youtube.com/@ClashTillJcries"
+              target="_blank"
+              class="footer-social-link"
+              title="YouTube"
+            >
+              <i class="bi bi-youtube"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@clashtilljcries"
+              target="_blank"
+              class="footer-social-link"
+              title="TikTok"
+            >
+              <i class="bi bi-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============================================================
+         YouTube Website Portfolio Modal -- Go Live to view video from Modal
+         ============================================================ -->
+    <div
+      class="modal fade"
+      id="champCodeModal"
+      tabindex="-1"
+      aria-labelledby="champCodeModalLabel"
+      aria-hidden="true"
+    >
+      <!-- modal-lg gives a wider dialog -->
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content project-modal-content">
+          <!-- Header: tag + title + close button -->
+          <div class="modal-header project-modal-header">
+            <div>
+              <span class="project-tag cyan mb-1 d-inline-block"
+                >Web Development</span
+              >
+              <h5
+                class="modal-title project-modal-title"
+                id="champCodeModalLabel"
+              >
+                Website Portfolio
+              </h5>
+            </div>
+
+            <button
+              type="button"
+              class="project-modal-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <!-- Body: the YouTube embed -->
+          <div class="modal-body project-modal-body">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="champCodeIframe"
+                src=""
+                title="ChampCode Academy Demo"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <!-- Footer: close button only -->
+          <div class="modal-footer project-modal-footer">
+            <button
+              type="button"
+              class="btn-fl-primary"
+              data-bs-dismiss="modal"
+              style="font-size: 1.02rem; padding: 9px 20px"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         YouTube Marketing Analyst AI Portfolio Modal
+         ============================================================ -->
+    <div
+      class="modal fade"
+      id="biaiModal"
+      tabindex="-1"
+      aria-labelledby="biaiModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content project-modal-content">
+          <div class="modal-header project-modal-header">
+            <div>
+              <span class="project-tag purple mb-1 d-inline-block"
+                >AI · React · Python</span
+              >
+              <h5 class="modal-title project-modal-title" id="biaiModalLabel">
+                Marketing Analyst AI Portfolio Demo
+              </h5>
+            </div>
+            <button
+              type="button"
+              class="project-modal-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body project-modal-body">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="biaiIframe"
+                src=""
+                title="Business Intelligence AI Demo"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="modal-footer project-modal-footer">
+            <button
+              type="button"
+              class="btn-fl-primary"
+              data-bs-dismiss="modal"
+              style="font-size: 1.02rem; padding: 9px 20px"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         YouTube CRM Portfolio Modal
+         ============================================================ -->
+    <div
+      class="modal fade"
+      id="crmModal"
+      tabindex="-1"
+      aria-labelledby="crmModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content project-modal-content">
+          <div class="modal-header project-modal-header">
+            <div>
+              <span class="project-tag amber mb-1 d-inline-block"
+                >Operations · CRM</span
+              >
+              <h5 class="modal-title project-modal-title" id="crmModalLabel">
+                CRM Portfolio
+              </h5>
+            </div>
+            <button
+              type="button"
+              class="project-modal-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body project-modal-body">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="crmIframe"
+                src=""
+                title="CRM & Customer Portal Demo"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="modal-footer project-modal-footer">
+            <button
+              type="button"
+              class="btn-fl-primary"
+              data-bs-dismiss="modal"
+              style="font-size: 1.02rem; padding: 9px 20px"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

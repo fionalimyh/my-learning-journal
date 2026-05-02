@@ -1,0 +1,1566 @@
+/* ---- Google Fonts Import ---- */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Outfit:wght@300;400;500;600&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap");
+
+/* ============================================================
+   Css Designs/Formats
+   ============================================================ */
+:root {
+  /* Backgrounds */
+  --bg: #07091a; /* deepest navy — page background */
+  --bg-2: #0d1225; /* slightly lighter — section alternate */
+  --card: #111827; /* card surface */
+  --card-2: #0f1930; /* card accordion body */
+
+  /* Borders */
+  --border: rgba(0, 212, 255, 0.12);
+  --border-hover: rgba(0, 212, 255, 0.35);
+
+  /* Text */
+  --text: #e8f0fe;
+  --muted: #6b7fa3;
+
+  /* Accent palette */
+  --accent: #00d4ff; /* electric cyan — primary accent */
+  --accent-2: #a78bfa; /* deep violet — secondary accent */
+  --accent-warm: #f59e0b; /* amber — star ratings & highlights */
+
+  /* Glow helpers */
+  --glow: rgba(0, 212, 255, 0.15);
+  --glow-strong: rgba(0, 212, 255, 0.35);
+}
+
+/* ============================================================
+   Base reset and typography
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* All headings use the display font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 800;
+  color: var(--text);
+}
+
+/* Monospace utility class for tags, labels, and dates */
+.mono {
+  font-family: "DM Mono", monospace;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+a:hover {
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* ============================================================
+   .navbar-expand-lg handles hamburger based on size:
+   - Desktop (≥992px): full links visible, toggler hidden
+   - Mobile/Tablet (<992px): toggler visible, links collapse
+   ============================================================ */
+.fl-navbar {
+  background: rgba(7, 9, 26, 0.95);
+  backdrop-filter: blur(14px); /* glass effect */
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+  position: sticky; /* sticks to top on scroll */
+  top: 0;
+  z-index: 1000;
+  transition:
+    background 0.3s,
+    box-shadow 0.3s;
+}
+
+/* Name Logo */
+.navbar-brand {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--text) !important;
+  letter-spacing: -0.02em;
+}
+.navbar-brand span {
+  color: var(--accent);
+} /* the dot in name logo */
+
+/* Individual nav links */
+.fl-nav-link {
+  font-family: "DM Mono", monospace;
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted) !important;
+  padding: 6px 14px !important;
+  border-radius: 6px;
+  transition: color 0.2s;
+  position: relative;
+}
+
+/* Animated underline on hover/active */
+.fl-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 14px;
+  right: 14px;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.22s ease;
+}
+
+.fl-nav-link:hover,
+.fl-nav-link.active {
+  color: var(--accent) !important;
+}
+
+.fl-nav-link:hover::after,
+.fl-nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Hamburger toggle button styling */
+.navbar-toggler {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+.navbar-toggler-icon {
+  filter: invert(0.8);
+} /* make bars colours lighter */
+
+/* Mobile collapsed nav */
+.navbar-collapse .fl-nav-link {
+  display: block;
+  border-bottom: 1px solid var(--border);
+  padding: 12px 4px !important;
+  border-radius: 0;
+}
+.navbar-collapse .fl-nav-link::after {
+  display: none;
+}
+
+/* ============================================================
+   Home Page hero section
+   ============================================================ */
+.hero-section {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+/* Grid overlay */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at 60% 40%, black 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(
+    ellipse at 60% 40%,
+    black 20%,
+    transparent 75%
+  );
+  pointer-events: none;
+}
+
+/* Connect with Me */
+.hero-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.84rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-label::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* Big name heading */
+.hero-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+.hero-title .accent {
+  color: var(--accent);
+}
+.hero-title .accent-2 {
+  color: var(--accent-2);
+}
+
+/* Typewriter element */
+#typewriter {
+  color: var(--accent);
+}
+
+/* Blinking Cursor */
+.typewriter-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.1em;
+  background: var(--accent);
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: white;
+  max-width: 600px;
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+
+/* ---- CTA Buttons ---- */
+.btn-fl-primary {
+  background: var(--accent);
+  color: #07091a;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 13px 28px;
+  border-radius: 8px;
+  border: none;
+  letter-spacing: 0.02em;
+  transition:
+    box-shadow 0.22s,
+    transform 0.15s;
+  display: inline-block;
+}
+.btn-fl-primary:hover {
+  background: var(--accent);
+  color: #07091a;
+  box-shadow: 0 0 28px var(--glow-strong);
+  transform: translateY(-2px);
+}
+.btn-fl-primary:active {
+  transform: translateY(0);
+}
+
+.btn-fl-outline {
+  background: transparent;
+  color: var(--text);
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: 1px solid var(--border-hover);
+  letter-spacing: 0.02em;
+  transition:
+    border-color 0.22s,
+    box-shadow 0.22s,
+    color 0.22s,
+    transform 0.15s;
+  display: inline-block;
+}
+.btn-fl-outline:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 18px var(--glow);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ---- Stats Bar ---- */
+.stats-bar {
+  display: flex;
+  margin-top: 52px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--bg-2);
+}
+.stat-item {
+  flex: 1;
+  padding: 22px 20px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+  min-width: 110px;
+  transition: background 0.2s;
+}
+.stat-item:last-child {
+  border-right: none;
+}
+.stat-item:hover {
+  background: rgba(0, 212, 255, 0.03);
+}
+
+.stat-number {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--accent);
+  display: block;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.stat-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ============================================================
+   Hero Image
+   .hero-img-wrap, card frame with brand border and shadow effect
+   .hero-portrait, the illustration image and rounded corners
+   ============================================================ */
+
+/* Wrapper adds a subtle card frame effect around the image */
+.hero-img-wrap {
+  position: relative;
+  display: inline-block;
+  border-radius: 24px;
+  /* Brand-purple border */
+  border: 2px solid var(--border);
+
+  box-shadow:
+    0 8px 32px rgba(83, 58, 253, 0.13),
+    0 2px 8px rgba(28, 30, 84, 0.07);
+  /* Image corners follow the border-radius */
+  overflow: hidden;
+  /* Lift effect when hover on */
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hero-img-wrap:hover {
+  box-shadow:
+    0 16px 48px rgba(83, 58, 253, 0.2),
+    0 4px 12px rgba(28, 30, 84, 0.1);
+  transform: translateY(-4px);
+}
+
+/* The illustration image itself */
+.hero-portrait {
+  display: block;
+  width: 100%;
+  max-width: 420px; /* caps size on large screens */
+  height: auto;
+  border-radius: 22px; /* slightly less than wrapper so border shows cleanly */
+  object-fit: cover;
+}
+
+/* Responsive — slightly smaller on tablet */
+@media (max-width: 991.98px) {
+  .hero-portrait {
+    max-width: 340px;
+  }
+}
+
+/* Full-width on mobile, margin-top to separate from text */
+@media (max-width: 575.98px) {
+  .hero-img-wrap {
+    margin-top: 36px;
+  }
+  .hero-portrait {
+    max-width: 100%;
+    border-radius: 16px;
+  }
+}
+
+/* ============================================================
+   Section layout
+   ============================================================ */
+.section-pad {
+  padding: 80px 0;
+}
+
+.section-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.83rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-label::before {
+  content: "//";
+  color: var(--accent-2);
+}
+
+.section-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+}
+
+.section-desc {
+  color: var(--muted);
+  font-size: 1.2rem;
+  max-width: 1500px;
+  margin-bottom: 44px;
+  line-height: 1.75;
+}
+
+/* ============================================================
+   Project / feature cards
+   ============================================================ */
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s,
+    transform 0.2s;
+}
+
+/* Animated top-edge gradient line on hover */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.32s ease;
+}
+
+.project-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 10px 40px rgba(0, 212, 255, 0.08);
+  transform: translateY(-5px);
+}
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.project-card h4 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.project-card p {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+/* Tag shown above card title */
+.project-tag {
+  font-family: "DM Mono", monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+.project-tag.cyan {
+  color: var(--accent);
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+.project-tag.purple {
+  color: var(--accent-2);
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+.project-tag.amber {
+  color: var(--accent-warm);
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+.project-tag.green {
+  color: #4ade80;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+/* Arrow link at card bottom */
+.project-link {
+  font-family: "DM Mono", monospace;
+  font-size: 0.87rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s;
+}
+.project-link:hover {
+  color: var(--accent);
+  gap: 11px;
+}
+
+/* ============================================================
+   Skills Section (labels)
+   ============================================================ */
+.skills-section {
+  background: var(--bg-2);
+  padding: 100px 0;
+}
+
+.skill-badge {
+  font-family: "DM Mono", monospace;
+  font-size: 0.88rem;
+  padding: 7px 15px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+  display: inline-block;
+  margin: 4px 3px;
+  cursor: default;
+}
+.skill-badge:hover,
+.skill-badge.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(0, 212, 255, 0.05);
+  box-shadow: 0 0 12px var(--glow);
+}
+.skill-badge.purple:hover {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+  background: rgba(124, 58, 237, 0.06);
+  box-shadow: 0 0 12px rgba(124, 58, 237, 0.2);
+}
+.skill-badge.amber:hover {
+  border-color: var(--accent-warm);
+  color: var(--accent-warm);
+  background: rgba(245, 158, 11, 0.06);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.fl-footer {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  padding: 44px 0 32px;
+  margin-top: 80px;
+}
+.fl-footer p {
+  color: var(--muted);
+  font-size: 0.93rem;
+  margin: 0;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--muted) !important;
+  font-size: 1rem;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+}
+.footer-social-link:hover {
+  border-color: var(--accent);
+  color: var(--accent) !important;
+  box-shadow: 0 0 12px var(--glow);
+}
+
+/* ============================================================
+   Page Hero (used on sub-pages)
+   ============================================================ */
+.page-hero {
+  padding: 40px 0 40px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 20% 50%,
+    rgba(0, 212, 255, 0.05) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+.page-hero-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.84rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.page-hero-label::before {
+  content: "//";
+  color: var(--accent-2);
+}
+.page-hero h1 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+.page-hero p {
+  color: var(--accent);
+  font-size: 0.95rem;
+  max-width: 1500px;
+  margin: 0;
+}
+
+/* ============================================================
+   ABOUT PAGE — Education Timeline
+   ============================================================ */
+.timeline {
+  position: relative;
+  padding-left: 34px;
+}
+/* Vertical gradient line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, var(--accent) 0%, transparent 100%);
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 36px;
+}
+
+/* Glowing dot on the line */
+.timeline-dot {
+  position: absolute;
+  left: -35px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 10px var(--accent);
+}
+.timeline-date {
+  font-family: "DM Mono", monospace;
+  font-size: 0.83rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.timeline-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+.timeline-sub {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+/* ============================================================
+   ABOUT PAGE — Work Experience Accordion
+   ============================================================ */
+.fl-accordion .accordion-item {
+  background: var(--card);
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.fl-accordion .accordion-button {
+  background: var(--card);
+  color: var(--text);
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: none;
+  border-radius: 12px !important;
+}
+.fl-accordion .accordion-button:not(.collapsed) {
+  background: var(--card-2);
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  border-radius: 12px 12px 0 0 !important;
+}
+/* Tint the default Bootstrap chevron to cyan */
+.fl-accordion .accordion-button::after {
+  filter: invert(0.8) sepia(1) saturate(5) hue-rotate(170deg);
+}
+.fl-accordion .accordion-body {
+  background: var(--card-2);
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.72;
+  padding: 30px 54px;
+}
+.fl-accordion .accordion-body ul {
+  padding-left: 18px;
+}
+.fl-accordion .accordion-body li {
+  margin-bottom: 6px;
+}
+
+.work-period {
+  font-family: "DM Mono", monospace;
+  font-size: 0.83rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+  letter-spacing: 0.08em;
+}
+.work-tag {
+  font-family: "DM Mono", monospace;
+  font-size: 0.78rem;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  color: var(--accent);
+  display: inline-block;
+  margin: 2px;
+}
+
+/* ============================================================
+   SKILLS GRID (categorised)
+   ============================================================ */
+.skill-cat-title {
+  font-family: "DM Mono", monospace;
+  font-size: 0.83rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 14px;
+}
+
+/* ============================================================
+   DESIGN THINKING PAGE
+   ============================================================ */
+.dt-section {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--border);
+}
+.dt-section:last-of-type {
+  border-bottom: none;
+}
+
+/* Cards for each heuristic evaluation item */
+.heuristic-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+  transition: border-color 0.22s;
+}
+.heuristic-card:hover {
+  border-color: var(--border-hover);
+}
+
+.heuristic-num {
+  font-family: "DM Mono", monospace;
+  font-size: 0.82rem;
+  color: var(--accent-2);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.heuristic-title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 7px;
+}
+.heuristic-body {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* Verdict pill: pass / partial / fail */
+.verdict {
+  font-family: "DM Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 9px;
+}
+.verdict-pass {
+  background: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+}
+.verdict-neutral {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+}
+.verdict-fail {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+}
+
+/* Wireframe placeholder boxes */
+.wireframe-box {
+  border: 1px dashed rgba(0, 212, 255, 0.28);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  color: var(--accent);
+  font-family: "DM Mono", monospace;
+  font-size: 1rem;
+  background: rgba(0, 212, 255, 0.02);
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Wireframe carousel */
+
+/* Each slide: add breathing room at top so dot indicators don't
+   overlap the label, and at bottom for the Prev/Next buttons.    */
+.wf-slide {
+  padding: 8px 4px 48px;
+}
+
+/* Page name label at the top of every slide e.g. "01 · Home" */
+.wf-page-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+/* Dot indicators */
+.wf-indicators {
+  bottom: auto !important;
+  top: 0 !important;
+  justify-content: flex-end !important;
+  margin: 0 !important;
+  padding: 6px 4px 0 !important;
+}
+
+/* Each dot: styled to match the site palette */
+.wf-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--border, rgba(83, 58, 253, 0.3));
+  border: none;
+  opacity: 1;
+  transition: background-color 0.2s;
+}
+
+.wf-indicators .active {
+  background-color: var(--accent) !important;
+}
+
+/* Prev / Next buttons: float inside the card at the bottom edge   */
+.wf-ctrl {
+  /* Override Bootstrap's full-height absolute positioning */
+  top: auto !important;
+  bottom: 6px !important;
+  width: 32px !important;
+  height: 32px !important;
+  background: rgba(83, 58, 253, 0.15) !important;
+  border: 1px solid rgba(83, 58, 253, 0.3) !important;
+  border-radius: 50% !important;
+  opacity: 1 !important;
+  transition: background 0.2s;
+}
+
+.wf-ctrl:hover {
+  background: rgba(83, 58, 253, 0.35) !important;
+}
+
+/* Position left/right with enough room not to overlap each other */
+.carousel-control-prev.wf-ctrl {
+  left: calc(50% - 40px) !important;
+}
+.carousel-control-next.wf-ctrl {
+  right: calc(50% - 40px) !important;
+}
+
+/* Make the arrow icons slightly smaller to fit the compact button */
+.wf-ctrl .carousel-control-prev-icon,
+.wf-ctrl .carousel-control-next-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Build process steps */
+.process-step {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+.step-num {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgba(0, 212, 255, 0.13);
+  line-height: 1;
+  min-width: 44px;
+}
+.step-content h5 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+.step-content p {
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* RWD device boxes */
+.rwd-device {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+.rwd-device:hover {
+  border-color: var(--border-hover);
+}
+.rwd-device-icon {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+.rwd-device-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.83rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.rwd-device-range {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* ============================================================
+   PORTFOLIO PAGE — Contact Form
+   ============================================================ */
+.fl-form .form-control,
+.fl-form .form-select {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  padding: 12px 16px;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  transition:
+    border-color 0.22s,
+    box-shadow 0.22s;
+}
+.fl-form .form-control:focus,
+.fl-form .form-select:focus {
+  background: var(--card);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+  color: var(--text);
+  outline: none;
+}
+.fl-form .form-control::placeholder {
+  color: var(--muted);
+}
+.fl-form .form-select option {
+  background: var(--card);
+  color: var(--text);
+}
+.fl-form label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 7px;
+}
+
+/* ============================================================
+   Star rating
+   ============================================================ */
+.star-rating {
+  display: flex;
+  gap: 6px;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.star-rating input {
+  display: none;
+}
+.star-rating label {
+  font-size: 1.9rem;
+  color: var(--muted);
+  cursor: pointer;
+  transition:
+    color 0.14s,
+    transform 0.1s;
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: inherit;
+}
+/* Fill stars on hover and when checked (and all preceding siblings) */
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+  color: var(--accent-warm);
+}
+.star-rating label:hover {
+  transform: scale(1.15);
+}
+
+/* ============================================================
+   Scroll reveal effect
+   JS adds .visible when element enters viewport
+   ============================================================ */
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+
+/* ============================================================
+   BADGES (general use)
+   ============================================================ */
+.badge-fl {
+  font-family: "DM Mono", monospace;
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  color: var(--accent);
+  margin: 6px;
+  display: inline-block;
+}
+.badge-fl.purple {
+  background: rgba(124, 58, 237, 0.08);
+  border-color: rgba(124, 58, 237, 0.2);
+  color: var(--accent-2);
+}
+.badge-fl.amber {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.2);
+  color: var(--accent-warm);
+}
+.badge-fl.green {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+}
+
+/* Utility divider */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 52px 0;
+}
+
+/* Glass card variant, white base so it pops more on dark bg */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+/* ============================================================
+   Responsive overrides
+   ============================================================ */
+
+/* ---- Mobile: <576px ---- */
+@media (max-width: 575.98px) {
+  .hero-section {
+    min-height: auto;
+    padding: 44px 0 56px;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Stack stat bar vertically */
+  .stats-bar {
+    flex-direction: column;
+  }
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Full-width buttons on mobile */
+  .btn-fl-primary,
+  .btn-fl-outline {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .project-card {
+    padding: 20px 18px;
+  }
+  .section-pad {
+    padding: 80px 0;
+  }
+  .page-hero {
+    padding: 52px 0 36px;
+  }
+}
+
+/* ---- Tablet: ≥576px and <992px ---- */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .hero-title {
+    font-size: 2.7rem;
+  }
+  .stats-bar .stat-item {
+    min-width: 100px;
+  }
+  .section-pad {
+    padding: 64px 0;
+  }
+}
+
+/* ---- Desktop: ≥992px ---- */
+@media (min-width: 992px) {
+  .hero-section {
+    padding: 80px 0;
+  }
+  /* Hamburger toggler hidden by Bootstrap's .navbar-expand-lg */
+}
+
+/* ============================================================
+   Website Portfolio Youtube Modal 
+   ============================================================ */
+
+/* Modal backdrop — slightly darker than Bootstrap default for focus */
+.modal-backdrop.show {
+  opacity: 0.65;
+}
+
+/* Modal card shell */
+.project-modal-content {
+  /* White card with brand border — consistent with .project-card */
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  /* Shadow: soft base layer + brand-purple glow */
+  box-shadow:
+    0 24px 64px rgba(83, 58, 253, 0.15),
+    0 4px 16px rgba(28, 30, 84, 0.08);
+  overflow: hidden; /* keeps rounded corners on inner elements */
+}
+
+/* Modal header — light grey tint to separate from the video body */
+.project-modal-header {
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-modal-title {
+  /* Deep navy — same as .section-title headings across the site */
+  color: var(--text-primary);
+  font-family: "Syne", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Custom X close button — replaces Bootstrap's default btn-close */
+.project-modal-close {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-muted);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0; /* prevent squishing on small screens */
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.project-modal-close:hover {
+  background: var(--bg-3); /* brand-50: slightly deeper lavender on hover */
+  border-color: var(--accent);
+  color: var(--accent); /* brand purple */
+}
+
+/* Modal body — zero padding so the video fills edge-to-edge */
+.project-modal-body {
+  padding: 0;
+  background: #000; /* black letterbox if video has bars */
+}
+
+/* Modal footer */
+.project-modal-footer {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* .project-link-btn — makes the <button> look identical to the <a> .project-link */
+.project-link-btn {
+  /* Reset browser button defaults */
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  /* Copy .project-link visual style */
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition:
+    gap 0.2s,
+    color 0.2s;
+}
+
+.project-link-btn:hover {
+  color: var(--accent-hover, #3b28cc);
+  gap: 9px; /* arrow nudges right on hover — same micro-interaction as .project-link */
+}
+
+/* ============================================================
+   Design thinking page: Heuristic tabs and accordion
+   ============================================================ */
+
+/* ── Outer tab strip ── */
+.heuristic-tabs {
+  border-bottom: 2px solid var(--border); /* replaces Bootstrap's default tab border */
+  gap: 4px;
+  flex-wrap: nowrap; /* keep both tabs on one line */
+  overflow-x: auto; /* scroll on very small screens */
+}
+
+/* Tab buttons — unselected */
+.heuristic-tabs .nav-link {
+  display: flex;
+  flex-direction: column; /* stack the small "Reference N" label above site name */
+  gap: 2px;
+  padding: 20px 36px; /* increased L/R padding for a wider, more clickable tab */
+  border-radius: 8px 8px 0 0; /* only top corners rounded, flush to content below */
+  border: 1px solid var(--border); /* always-visible border so inactive tabs read as clickable */
+  border-bottom: none; /* bottom edge merges into the content area */
+  color: var(--muted);
+  font-family: "Outfit", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: var(
+    --bg-2
+  ); /* subtle fill so tabs look like distinct clickable areas */
+  transition:
+    color 0.2s,
+    background 0.2s,
+    border-color 0.2s;
+  white-space: nowrap;
+}
+
+.heuristic-tabs .nav-link:hover {
+  color: var(--text);
+  background: var(--bg-3); /* subtle lavender tint on hover */
+  border-color: var(--border);
+}
+
+/* Tab button — selected/active state */
+.heuristic-tabs .nav-link.active {
+  color: var(--accent); /* brand purple */
+  background: var(--bg); /* lifts off the section background */
+  border-color: var(--border) var(--border) var(--bg); /* merges bottom edge */
+  font-weight: 600;
+}
+
+/* Small "Reference N" label above site name */
+.tab-ref-label,
+.tab-site-label {
+  font-family: "DM Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1;
+}
+
+.heuristic-tabs .nav-link.active .tab-ref-label,
+.heuristic-tabs .nav-link.active .tab-site-label {
+  color: var(--accent); /* matches active tab colour */
+}
+
+/* ── Tab content area ── */
+.heuristic-tab-content {
+  border: 1px solid var(--border);
+  border-top: none; /* seamlessly continues from the tab strip */
+  border-radius: 0 0 12px 12px;
+  padding: 24px 20px;
+  background: var(--bg);
+}
+
+/* URL line beneath the tab-content header */
+.tab-site-url {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* ── Inner accordion items ── */
+.heuristic-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* small gap between each H0N row */
+}
+
+/* Each accordion row */
+.heuristic-acc-item {
+  border: 1px solid var(--border);
+  border-radius: 10px !important; /* override Bootstrap's flat corners */
+  overflow: hidden;
+  background: var(--bg-2);
+  transition: border-color 0.2s;
+}
+
+.heuristic-acc-item:hover {
+  border-color: var(--accent);
+}
+
+/* Accordion button (collapsed + expanded state) */
+.heuristic-acc-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 20px;
+  background: var(--bg-2) !important; /* prevent Bootstrap's white flash */
+  color: var(--text) !important;
+  box-shadow: none !important; /* remove Bootstrap focus shadow */
+  font-family: "Outfit", sans-serif;
+  font-size: 1.1rem;
+}
+
+/* H0N badge on the left */
+.heuristic-acc-num,
+.acc-hnum {
+  font-family: "DM Mono", monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 2px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Heuristic title text in the header */
+.heuristic-acc-title,
+.acc-htitle {
+  flex: 1; /* takes up remaining space, pushes verdict right */
+  font-weight: 500;
+  color: var(--text);
+  text-align: left;
+  line-height: 1.35;
+}
+
+/* Verdict badge anchored to the right, inside the header */
+.acc-verdict {
+  flex-shrink: 0; /* never wrap or shrink the badge */
+  font-size: 0.78rem !important; /* slightly smaller inside the header row */
+  padding: 3px 9px !important;
+}
+
+/* Bootstrap's default caret arrow — nudge it so it doesn't crowd the verdict */
+.heuristic-acc-btn::after {
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+/* Expanded state — background tint only, no left bar */
+.heuristic-acc-btn:not(.collapsed) {
+  background: var(--bg-3) !important;
+}
+
+/* Accordion body text */
+.heuristic-acc-body {
+  padding: 30px 50px; /* increased top/bottom padding for breathing room */
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.6;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+/* Retain a clear accent border when the item is expanded so the
+   open panel stays visually framed and draws user focus            */
+.heuristic-acc-item:has(.accordion-collapse.show) {
+  border-color: var(--accent);
+}
+
+/* ── Responsive: on mobile, shrink the H0N badge text ── */
+@media (max-width: 575px) {
+  .heuristic-acc-num,
+  .acc-hnum {
+    font-size: 0.68rem;
+    padding: 2px 6px;
+  }
+  .heuristic-acc-title,
+  .acc-htitle {
+    font-size: 0.88rem;
+  }
+  .acc-verdict {
+    display: none; /* hide verdict badge on very small screens to save space */
+  }
+  .heuristic-tabs .nav-link {
+    padding: 8px 14px;
+    font-size: 0.88rem;
+  }
+}

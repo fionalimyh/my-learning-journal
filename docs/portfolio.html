@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio &amp; Contact</title>
+    <meta
+      name="description"
+      content="Projects portfolio and contact form for Fiona Lim — digital operations and tech."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Outfit:wght@300;400;500;600&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+       Navbar
+       ============================================================ -->
+    <nav class="navbar navbar-expand-lg fl-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Fiona<span>.</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+          aria-controls="navMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto gap-1">
+            <li class="nav-item">
+              <a class="nav-link fl-nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fl-nav-link" href="design-thinking.html"
+                >Design Thinking</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fl-nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fl-nav-link active" href="portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============================================================
+       Page hero
+       ============================================================ -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero-label">Building Blocks</p>
+        <h1 class="reveal">My Portfolio</h1>
+        <p class="reveal reveal-delay-1" style="font-size: 1.1rem">
+          A showcase of projects demonstrating HTML/CSS/JS development, design
+          thinking, GenAI works, and digital operations — plus a contact form at
+          end of page to connect with me.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       Projects Section
+       ============================================================ -->
+    <section class="section-pad">
+      <div class="container">
+        <p class="section-label reveal">Individual Work</p>
+        <h2 class="section-title reveal">Projects &amp; Builds</h2>
+        <p class="section-desc reveal">
+          Each project showcases a distinct skill set — from full-stack web
+          development to AI pipeline architecture and creative content
+          production.
+        </p>
+
+        <!-- ── Projects & Builds: 2 rows × 3 columns ── -->
+        <div class="row g-4">
+          <!-- Card 1: Website Portfolio (video: 0ugS8mo_SyQ) -->
+          <div class="col-lg-4 col-md-6 col-12 reveal" id="champcode">
+            <div class="project-card">
+              <span class="project-tag cyan">Web Development</span>
+              <h4>Website Portfolio</h4>
+              <p class="flex-grow-1">
+                An education platform covering curriculum architecture,
+                responsive front-end design, UX flow, and content management.
+              </p>
+
+              <button
+                type="button"
+                class="project-link project-link-btn mt-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#champCodeModal"
+              >
+                <i class="bi bi-play-circle"></i> View Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Marketing Analyst AI (video: LKcLhWyQA3o) -->
+          <div class="col-lg-4 col-md-6 col-12 reveal reveal-delay-1" id="biai">
+            <div class="project-card">
+              <span class="project-tag purple">AI · React · Python</span>
+              <h4>Marketing Analyst AI</h4>
+              <p class="flex-grow-1">
+                Running on Marketing Analyst AI Prompt for analysis. Includes a
+                React JSX front-end dashboard and a Python CSV pre-parser that
+                fixed uploaded data issues (Infinity, $ symbols, NaN cells).
+              </p>
+
+              <button
+                type="button"
+                class="project-link project-link-btn mt-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#biaiModal"
+              >
+                <i class="bi bi-play-circle"></i> View Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: CRM Platform (video: dTcFz_VDFz0) -->
+          <div class="col-lg-4 col-md-6 col-12 reveal reveal-delay-2" id="crm">
+            <div class="project-card">
+              <span class="project-tag amber">Operations · CRM</span>
+              <h4>CRM Platform</h4>
+              <p class="flex-grow-1">
+                CRM built from the ground, to handle 10X of business scale and
+                organisation scale. Raised CSAT to 95%, reduced churn from 30%
+                to 5%.
+              </p>
+
+              <button
+                type="button"
+                class="project-link project-link-btn mt-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#crmModal"
+              >
+                <i class="bi bi-play-circle"></i> View Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: Calories Counter Platform (video: lkaIjdOjTvo) -->
+          <div class="col-lg-4 col-md-6 col-12 reveal" id="blender">
+            <div class="project-card">
+              <span class="project-tag green">CSS · JS · HTML</span>
+              <h4>Calories Counter Platform</h4>
+              <p class="flex-grow-1">
+                With BMI tool, calorie calculator based on Singaporean Food and
+                automated Weekly Meal Planner with preset daily calorie target.
+              </p>
+
+              <button
+                type="button"
+                class="project-link project-link-btn mt-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#caloriesModal"
+              >
+                <i class="bi bi-play-circle"></i> View Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 5: Game Creation (video: ld4c8GWExQE) -->
+          <div class="col-lg-4 col-md-6 col-12 reveal reveal-delay-1" id="game">
+            <div class="project-card">
+              <span class="project-tag cyan">Unity Hub · C#</span>
+              <h4>VR Maze Game</h4>
+              <p class="flex-grow-1">
+                Developed a game using Unity and C# — covering game mechanics,
+                character logic, level design, and build deployment.
+              </p>
+
+              <button
+                type="button"
+                class="project-link project-link-btn mt-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#vrmazeModal"
+              >
+                <i class="bi bi-play-circle"></i> View Demo
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 6: ClashTillJcries, external links (YouTube + TikTok, no modal) -->
+          <div
+            class="col-lg-4 col-md-6 col-12 reveal reveal-delay-2"
+            id="clash"
+          >
+            <div class="project-card">
+              <span class="project-tag amber">Content · Gaming</span>
+              <h4>ClashTillJcries</h4>
+              <p class="flex-grow-1">
+                YouTube &amp; TikTok gaming channel — content strategy, video
+                editing, analytics tracking, and audience engagement management.
+              </p>
+              <div class="d-flex gap-3 flex-wrap mt-auto">
+                <a
+                  href="https://www.youtube.com/@ClashTillJcries"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <i class="bi bi-youtube"></i> YouTube
+                </a>
+                <a
+                  href="https://www.tiktok.com/@clashtilljcries"
+                  target="_blank"
+                  class="project-link"
+                >
+                  <i class="bi bi-tiktok"></i> TikTok
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /row (2×3 grid) -->
+      </div>
+      <!-- /container -->
+    </section>
+
+    <!-- ============================================================
+       HTML/CSS/JS 
+       ============================================================ -->
+    <section
+      class="section-pad"
+      style="
+        background: var(--bg-2);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      "
+    >
+      <div class="container">
+        <p class="section-label reveal">Skills</p>
+        <h2 class="section-title reveal">HTML / CSS / JS</h2>
+        <p class="section-desc reveal">
+          Responsive design, DOM manipulation and CSS animation.
+        </p>
+
+        <div class="row g-4">
+          <!-- YouTube Modal Interaction -->
+          <div class="col-lg-4 col-md-6 col-12 reveal">
+            <div class="project-card">
+              <span class="project-tag cyan">JavaScript · Bootstrap 5</span>
+              <h4>YouTube Modal Player</h4>
+              <p>
+                A Bootstrap 5 modal that embeds a YouTube video. The
+                <code style="font-size: 0.85em; color: var(--accent)">src</code>
+                is injected only when the modal opens, and cleared the instant
+                it closes — so audio never plays silently in the background.
+              </p>
+            </div>
+          </div>
+
+          <!-- Typewriter -->
+          <div class="col-lg-4 col-md-6 col-12 reveal reveal-delay-1">
+            <div class="project-card">
+              <span class="project-tag purple">JavaScript</span>
+              <h4>Typewriter Looping Effect</h4>
+              <p>
+                JS typewriter with delete/retype loop, used on the homepage
+                hero.
+              </p>
+            </div>
+          </div>
+
+          <!-- Scroll Reveal -->
+          <div class="col-lg-4 col-md-6 col-12 reveal reveal-delay-2">
+            <div class="project-card">
+              <span class="project-tag green">JAVASCRIPT · CSS</span>
+              <h4>Scroll Reveal</h4>
+              <p>
+                Triggering fade-in and slide-up effect on scroll. Effect is used
+                across all pages on this site.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </section>
+
+    <!-- ============================================================
+       Contact form and star rating, integrate formspree.io opensource for live form
+       ============================================================ -->
+    <section
+      class="section-pad"
+      id="contact"
+      style="
+        background: var(--bg-2);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      "
+    >
+      <div class="container">
+        <!-- Show a thankyou banner if Formspree redirected back with ?sent=true -->
+        <div
+          id="thankYouBanner"
+          style="
+            display: none;
+            margin-bottom: 28px;
+            padding: 18px 22px;
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 12px;
+            color: #4ade80;
+            font-family: &quot;DM Mono&quot;, monospace;
+            font-size: 0.98rem;
+          "
+        >
+          ✓ Your message was sent successfully! I'll be in touch within 24
+          hours.
+        </div>
+
+        <div class="row g-5">
+          <!-- ---- Left column: info + download ---- -->
+          <div class="col-lg-4 col-12">
+            <p class="section-label reveal">Contact</p>
+            <h2 class="section-title reveal">Let's Connect</h2>
+            <p
+              class="reveal reveal-delay-1"
+              style="color: var(--muted); line-height: 1.8; margin-bottom: 32px"
+            >
+              Open to full-time roles in digital operations, tech, or product.
+              Fill in the form and I'll respond within 24 hours.
+            </p>
+
+            <!-- Contact detail rows -->
+            <div class="d-flex flex-column gap-3 reveal reveal-delay-2">
+              <a
+                href="mailto:Fionalimyh@gmail.com"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  color: var(--muted);
+                  transition: color 0.2s;
+                "
+                onmouseover="this.style.color = 'var(--accent)'"
+                onmouseout="this.style.color = 'var(--muted)'"
+              >
+                <div
+                  style="
+                    width: 36px;
+                    height: 36px;
+                    border: 1px solid var(--border);
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                  "
+                >
+                  <i class="bi bi-envelope" style="color: var(--accent)"></i>
+                </div>
+                <span style="font-size: 1rem"
+                  ><span
+                    class="__cf_email__"
+                    data-cfemail="197f707677787570746071597e74787075377a7674"
+                    ><strong
+                      ><u
+                        ><span
+                          class="__cf_email__"
+                          data-cfemail="cd8ba4a2a3aca1a4a0b4a58daaa0aca4a1e3aea2a0"
+                          >Fionalimyh@gmail.com</span
+                        ></u
+                      ></strong
+                    ></span
+                  ></span
+                >
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/fionalyh"
+                target="_blank"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  color: var(--muted);
+                  transition: color 0.2s;
+                "
+                onmouseover="this.style.color = 'var(--accent)'"
+                onmouseout="this.style.color = 'var(--muted)'"
+              >
+                <div
+                  style="
+                    width: 36px;
+                    height: 36px;
+                    border: 1px solid var(--border);
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                  "
+                >
+                  <i class="bi bi-linkedin" style="color: var(--accent)"></i>
+                </div>
+                <span style="font-size: 1rem"
+                  ><strong>linkedin.com/in/fionalyh</strong></span
+                >
+              </a>
+
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  color: var(--muted);
+                "
+              >
+                <div
+                  style="
+                    width: 36px;
+                    height: 36px;
+                    border: 1px solid var(--border);
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                  "
+                >
+                  <i class="bi bi-clock" style="color: var(--accent)"></i>
+                </div>
+                <span style="font-size: 1rem"
+                  >Mon – Sun · 10:00 AM – 6:00 PM SGT</span
+                >
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  color: var(--muted);
+                "
+              >
+                <div
+                  style="
+                    width: 36px;
+                    height: 36px;
+                    border: 1px solid var(--border);
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                  "
+                >
+                  <i class="bi bi-geo-alt" style="color: var(--accent)"></i>
+                </div>
+                <span style="font-size: 1rem">Singapore (UTC+8)</span>
+              </div>
+            </div>
+            <!-- /contact details -->
+
+            <!-- CV download -->
+            <div class="mt-4 reveal reveal-delay-3">
+              <a
+                href="Fiona_Lims_Resume.pdf"
+                download
+                class="btn-fl-outline"
+                style="width: 100%; text-align: center"
+              >
+                <i class="bi bi-download me-2"></i>Download CV
+              </a>
+            </div>
+          </div>
+          <!-- /left col -->
+
+          <!-- ---- Right column: Formspree form ---- -->
+          <div class="col-lg-8 col-12">
+            <div class="glass-card reveal reveal-delay-1">
+              <h3 style="font-size: 1.1rem; margin-bottom: 6px">
+                Send a Message
+              </h3>
+              <p
+                style="
+                  font-family: &quot;DM Mono&quot;, monospace;
+                  font-size: 0.95rem;
+                  color: var(--muted);
+                  margin-bottom: 24px;
+                "
+              >
+                All fields marked * are required.
+              </p>
+
+              <!--
+              ═══════════════════════════════════════════════════════
+              FORMSPREE — Native HTML form 
+              ═══════════════════════════════════════════════════════
+            -->
+              <form
+                action="https://formspree.io/f/meeroqrq"
+                method="POST"
+                class="fl-form"
+                id="contactForm"
+              >
+                <!-- Formspree special fields (hidden — not shown to user) 
+                    _next: redirect URL after successful submission -->
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="portfolio.html?sent=true#contact"
+                />
+                <!-- _subject: email subject -->
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New portfolio enquiry"
+                />
+
+                <!-- Row 1: Name + Company -->
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6 col-12">
+                    <label for="senderName">Your Name*</label>
+                    <input
+                      type="text"
+                      id="senderName"
+                      name="name"
+                      class="form-control"
+                      placeholder="e.g. John Doe"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label for="company">Company</label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      class="form-control"
+                      placeholder="e.g. ABC Pte Ltd"
+                    />
+                  </div>
+                </div>
+
+                <!-- Row 2: Designation + Email -->
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6 col-12">
+                    <label for="designation">Designation</label>
+                    <input
+                      type="text"
+                      id="designation"
+                      name="designation"
+                      class="form-control"
+                      placeholder="e.g. Hiring Manager"
+                    />
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label for="email">Email*</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="e.g. your@email.com"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Row 3: Interview Day + Time -->
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6 col-12">
+                    <label for="interviewDay">Preferred Interview Day</label>
+                    <select
+                      id="interviewDay"
+                      name="interview_day"
+                      class="form-select"
+                    >
+                      <option value="" disabled selected>Select a day</option>
+                      <option value="Monday">Monday</option>
+                      <option value="Tuesday">Tuesday</option>
+                      <option value="Wednesday">Wednesday</option>
+                      <option value="Thursday">Thursday</option>
+                      <option value="Friday">Friday</option>
+                      <option value="Saturday">Saturday</option>
+                      <option value="Sunday">Sunday</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label for="interviewTime"
+                      >Preferred Interview Time (UTC+8)</label
+                    >
+                    <select
+                      id="interviewTime"
+                      name="interview_time"
+                      class="form-select"
+                    >
+                      <option value="" disabled selected>Select a time</option>
+                      <option value="10:00 AM">10:00 AM</option>
+                      <option value="11:00 AM">11:00 AM</option>
+                      <option value="12:00 PM">12:00 PM (Noon)</option>
+                      <option value="1:00 PM">1:00 PM</option>
+                      <option value="2:00 PM">2:00 PM</option>
+                      <option value="3:00 PM">3:00 PM</option>
+                      <option value="4:00 PM">4:00 PM</option>
+                      <option value="5:00 PM">5:00 PM</option>
+                      <option value="6:00 PM">6:00 PM</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div class="mb-4">
+                  <label for="message">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Let's Connect!"
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- Star Rating Widget -->
+                <div class="mb-4">
+                  <label style="display: block; margin-bottom: 12px">
+                    Rate this portfolio
+                    <span style="color: var(--muted); font-size: 0.8em"
+                      >(optional)</span
+                    >
+                  </label>
+
+                  <div
+                    class="star-rating"
+                    aria-label="Rate this portfolio from 1 to 5 stars"
+                    role="radiogroup"
+                  >
+                    <input
+                      type="radio"
+                      id="star5"
+                      name="portfolio_rating"
+                      value="5 stars"
+                    />
+                    <label for="star5" title="5 stars — Outstanding">★</label>
+
+                    <input
+                      type="radio"
+                      id="star4"
+                      name="portfolio_rating"
+                      value="4 stars"
+                    />
+                    <label for="star4" title="4 stars — Great">★</label>
+
+                    <input
+                      type="radio"
+                      id="star3"
+                      name="portfolio_rating"
+                      value="3 stars"
+                    />
+                    <label for="star3" title="3 stars — Fair">★</label>
+
+                    <input
+                      type="radio"
+                      id="star2"
+                      name="portfolio_rating"
+                      value="2 stars"
+                    />
+                    <label for="star2" title="2 stars — Needs Improvement"
+                      >★</label
+                    >
+
+                    <input
+                      type="radio"
+                      id="star1"
+                      name="portfolio_rating"
+                      value="1 star"
+                    />
+                    <label for="star1" title="1 star — Poor">★</label>
+                  </div>
+
+                  <p
+                    id="ratingDisplay"
+                    style="
+                      font-family: &quot;DM Mono&quot;, monospace;
+                      font-size: 0.95rem;
+                      color: var(--muted);
+                      margin-top: 8px;
+                      margin-bottom: 0;
+                    "
+                  >
+                    No rating selected yet
+                  </p>
+                </div>
+
+                <!-- Submit button -->
+                <button
+                  type="submit"
+                  class="btn-fl-primary"
+                  style="
+                    width: 100%;
+                    font-size: 0.95rem;
+                    text-align: center;
+                    border: none;
+                    cursor: pointer;
+                  "
+                >
+                  Send Message &nbsp;<i class="bi bi-send"></i>
+                </button>
+
+                <!-- Small note under button -->
+                <p
+                  style="
+                    font-family: &quot;DM Mono&quot;, monospace;
+                    font-size: 0.95rem;
+                    color: var(--muted);
+                    margin-top: 12px;
+                    text-align: center;
+                  "
+                >
+                  Powered by
+                  <a
+                    href="https://formspree.io"
+                    target="_blank"
+                    style="color: var(--muted)"
+                    >Formspree</a
+                  >
+                  · Free &amp; open · No spam
+                </p>
+              </form>
+            </div>
+            <!-- /glass-card -->
+          </div>
+          <!-- /right col -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </section>
+
+    <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+    <footer class="fl-footer">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <div class="col-md-4 col-12 text-md-start text-center">
+            <span
+              style="
+                font-family: &quot;Syne&quot;, sans-serif;
+                font-weight: 800;
+                font-size: 1.1rem;
+              "
+            >
+              Fiona<span style="color: var(--accent)">.</span>
+            </span>
+          </div>
+          <div class="col-md-4 col-12 text-center">
+            <p
+              style="
+                font-family: &quot;DM Mono&quot;, monospace;
+                font-size: 0.95rem;
+                letter-spacing: 0.08em;
+              "
+            >
+              © 2026 Fiona Lim · All rights reserved
+            </p>
+          </div>
+          <div
+            class="col-md-4 col-12 d-flex justify-content-md-end justify-content-center gap-2"
+          >
+            <a
+              href="https://www.linkedin.com/in/fionalyh"
+              target="_blank"
+              class="footer-social-link"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <a href="mailto:Fionalimyh@gmail.com" class="footer-social-link"
+              ><i class="bi bi-envelope"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/@ClashTillJcries"
+              target="_blank"
+              class="footer-social-link"
+              ><i class="bi bi-youtube"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@clashtilljcries"
+              target="_blank"
+              class="footer-social-link"
+              ><i class="bi bi-tiktok"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============================================================
+         Youtube Modals
+         ============================================================ -->
+    <!-- Website Modal (video: 0ugS8mo_SyQ) -->
+    <div
+      class="modal fade"
+      id="champCodeModal"
+      tabindex="-1"
+      aria-labelledby="champCodeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content project-modal-content">
+          <div class="modal-header project-modal-header">
+            <div>
+              <span class="project-tag cyan mb-1 d-inline-block"
+                >Web Development</span
+              >
+              <h5
+                class="modal-title project-modal-title"
+                id="champCodeModalLabel"
+              >
+                Website Portfolio — Live Demo
+              </h5>
+            </div>
+
+            <button
+              type="button"
+              class="project-modal-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body project-modal-body">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="champCodeIframe"
+                src=""
+                title="Website Portfolio Demo"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="modal-footer project-modal-footer">
+            <button
+              type="button"
+              class="btn-fl-primary"
+              data-bs-dismiss="modal"
+              style="font-size: 1.02rem; padding: 9px 20px"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marketing Analyst AI Modal (video: LKcLhWyQA3o) -->
+    <div
+      class="modal fade"
+      id="biaiModal"
+      tabindex="-1"
+      aria-labelledby="biaiModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content project-modal-content">
+          <div class="modal-header project-modal-header">
+            <div>
+              <span class="project-tag purple mb-1 d-inline-block"
+                >AI · React · Python</span
+              >
+              <h5 class="modal-title project-modal-title" id="biaiModalLabel">
+                Business Intelligence AI — Live Demo
+              </h5>
+            </div>
+            <button
+              type="button"
+              class="project-modal-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body project-modal-body">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="biaiIframe"
+                src=""
+                title="Business Intelligence AI Demo"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="modal-footer project-modal-footer">
+            <button
+              type="button"
+              class="btn-fl-primary"
+              data-bs-dismiss="modal"
+              style="font-size: 1.02rem; padding: 9px 20px"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CRM Modal (video: dTcFz_VDFz0) -->
+    <div
+      class="modal fade"
+      id="crmModal"
+      tabindex="-1"
+      aria-labelledby="crmModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content project-modal-content">
+          <div class="modal-header project-modal-header">
+            <div>
+              <span class="project-tag amber mb-1 d-inline-block"
+                >Operations · CRM</span
+              >
+              <h5 class="modal-title project-modal-title" id="crmModalLabel">
+                CRM &amp; Customer Portal — Live Demo
+              </h5>
+            </div>
+            <button
+              type="button"
+              class="project-modal-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body project-modal-body">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="crmIframe"
+                src=""
+                title="CRM &amp; Customer Portal Demo"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="modal-footer project-modal-footer">
+            <button
+              type="button"
+              class="btn-fl-primary"
+              data-bs-dismiss="modal"
+              style="font-size: 1.02rem; padding: 9px 20px"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calories Modal (video: lkaIjdOjTvo) -->
+    <div
+      class="modal fade"
+      id="caloriesModal"
+      tabindex="-1"
+      aria-labelledby="caloriesModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content project-modal-content">
+          <div class="modal-header project-modal-header">
+            <div>
+              <span class="project-tag green mb-1 d-inline-block"
+                >3D · Blender</span
+              >
+              <h5
+                class="modal-title project-modal-title"
+                id="caloriesModalLabel"
+              >
+                Interior Design (Blender) — Live Demo
+              </h5>
+            </div>
+            <button
+              type="button"
+              class="project-modal-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body project-modal-body">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="caloriesIframe"
+                src=""
+                title="Interior Design Blender Demo"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="modal-footer project-modal-footer">
+            <button
+              type="button"
+              class="btn-fl-primary"
+              data-bs-dismiss="modal"
+              style="font-size: 1.02rem; padding: 9px 20px"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VR Maze Game Modal (video: ld4c8GWExQE) -->
+    <div
+      class="modal fade"
+      id="vrmazeModal"
+      tabindex="-1"
+      aria-labelledby="vrmazeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content project-modal-content">
+          <div class="modal-header project-modal-header">
+            <div>
+              <span class="project-tag cyan mb-1 d-inline-block"
+                >Game Dev · Unity · C#</span
+              >
+              <h5 class="modal-title project-modal-title" id="vrmazeModalLabel">
+                Game Creation Project — Live Demo
+              </h5>
+            </div>
+            <button
+              type="button"
+              class="project-modal-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body project-modal-body">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="vrmazeIframe"
+                src=""
+                title="Game Creation Project Demo"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="modal-footer project-modal-footer">
+            <button
+              type="button"
+              class="btn-fl-primary"
+              data-bs-dismiss="modal"
+              style="font-size: 1.02rem; padding: 9px 20px"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
