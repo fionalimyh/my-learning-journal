@@ -39,5 +39,3 @@ Open `docs/index.html` directly in a browser, or serve the `docs/` folder with a
 ## Configuration
 
 Local-only environment values should be stored in `.env`. Do not commit `.env` to the repository.
-
-Use `.env.example` as the reference for required variable names.
